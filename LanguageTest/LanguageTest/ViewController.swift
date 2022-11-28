@@ -14,9 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubview();
-        
-        
-        titleLabel.text = NSLocalizedString("Go straight", comment: "");
+        constraints();
+        setupUI();
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +25,12 @@ class ViewController: UIViewController {
     
     func constraints() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false;
+        titleLabel.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, paddingTop: 100, paddingLeft: 100, paddingBottom: 0, paddingRight: 0, width: 200, height: 100, enableInsets: false);
     }
-
+    
+    func setupUI() {
+        titleLabel.backgroundColor = .systemBlue;
+        titleLabel.text = NSLocalizedString("Go straight", comment: "");
+    }
 }
 
