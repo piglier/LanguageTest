@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LanguageTest
+
+  Created by 朱彥睿 on 11/29/22.
+  
+*/
+"Go straight" = "Go straight";
+"Best record" = "Best record: %d KG %d sec";
