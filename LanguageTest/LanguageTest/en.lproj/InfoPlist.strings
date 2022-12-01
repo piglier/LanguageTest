@@ -6,3 +6,5 @@
   
 */
 "CFBundleDisplayName" = "LanguageTest";
+"NSLocationWhenInUseUsageDescription" = "Need you location to navigation";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Need you location to navigation";

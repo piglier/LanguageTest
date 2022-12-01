@@ -6,3 +6,5 @@
   
 */
 "CFBundleDisplayName" = "語言測試";
+"NSLocationWhenInUseUsageDescription" = "需要位置來導航";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "需要位置來導航";

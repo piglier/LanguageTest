@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class LanguageController: UIViewController {
     
     let titleLabel: UILabel = UILabel();
     let paramterLabel: UILabel = UILabel();
+    let locationManager: CLLocationManager = CLLocationManager();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,7 @@ class LanguageController: UIViewController {
         addSubview();
         constraints();
         setupUI();
+        locationManager.requestWhenInUseAuthorization();
         // Do any additional setup after loading the view.
     }
     
@@ -42,12 +45,13 @@ class LanguageController: UIViewController {
         let kg: Int = 100;
         let sec: Int = 60;
         let bestStr: String = NSLocalizedString("Best record", comment: "");
+        paramterLabel.numberOfLines = 0;
         paramterLabel.text = String.localizedStringWithFormat(bestStr, kg, sec);
         
         let imageStr: String = NSLocalizedString("english", comment: "") // 設定多國語系，填入key值
         let image: UIImage = UIImage(named: imageStr)!;
         let imageView: UIImageView = UIImageView(image: image);
-        imageView.frame = CGRect(x: 50, y: 50, width: 50, height: 50);
+        imageView.frame = CGRect(x: 25, y: 25, width: 50, height: 50);
         self.view.addSubview(imageView);
     }
 }
